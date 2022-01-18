@@ -7,3 +7,7 @@
 .avatar {
     width: 20px;
 }
+
+.contact-name{
+    display: inline-block;
+}
