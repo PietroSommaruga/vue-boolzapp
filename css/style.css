@@ -4,6 +4,17 @@
     box-sizing: border-box;
     font-size: 12px;
 }
+input{
+    border: none;
+    border-radius: 2px;
+    padding-left: 5px;
+}
+i {
+    font-size: 15px;
+   padding: 0 5px 0 5px;
+   color: rgb(157, 155, 155);
+   cursor: pointer;
+}
 
 .avatar {
     width: 40px;
@@ -11,9 +22,7 @@
     padding-left: 10px;
 }
 
-.contact-name{
-    display: inline-block;
-}
+
 
 .all {
     height: 1000px;
@@ -33,21 +42,21 @@
     height: 700px;
     position: relative;
     top: 5vh;
+    display: flex;
+
 }
 
 
 /* ----- header ----- */
 header {
     height: 50px;
-    width: 100%;
-    background-color: rgb(226, 226, 226);
-    display: flex;
+    width: 40%;
 }
 
 .header-left {
-    width: 40%;
-    height: 100%;
-    border-right: 1px solid black;
+    width: 100%;
+    height: 50px;
+    
     display: flex;
     justify-content: space-between; 
 }
@@ -58,14 +67,91 @@ header {
     align-items: center;
 }
 
- i {
-    padding: 0 5px 0 5px;
-    color: rgb(157, 155, 155);
+.header-left, .header-right {
+    background-color: rgb(226, 226, 226);
+}
+
+
+
+/* ----- header ----- */
+
+
+
+
+
+/* ----- main ----- */
+
+
+
+.main-left {
+    width: 40%;
+    height: 100%;
+    background-color: whitesmoke;
+}
+
+
+.left-notifiche {
+    width: 100%;
+    height: 50px;
+    padding-left: 10px;
+    background-color: rgba(31, 142, 226, 0.508);
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+.left-notifiche i {
+    background-color: #fff;
+    padding: 5px;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+.outline-gray {
+    color: rgb(136, 136, 136);
+    font-size: 10px;
+    text-decoration: underline;
+}
+
+.left-search {
+    height: 25px;
+    width: 100%;
+}
+
+
+.left-search input{
+    width: 100%;
+    height: 100%;
+}
+
+.left-down {
+    width: 100%;
+    height: 100%;
+}
+
+.left-down div:nth-child(odd) {
+    background-color: rgb(226, 226, 226);
+}
+
+.contacts-container {
+    height: 50px;
+    width: 98%;
+    display: flex;
+    align-items: center;
+}
+
+
+
+
+
+/* ------ main-right ----- */
+.main-right {
+    width: 100%;
+    height: 100%;
 }
 
 .header-right {
-    width: 60%;
-    height: 100%;
+    width: 100%;
+    height: 50px;
     display: flex;
     justify-content: space-between;
 }
@@ -80,63 +166,57 @@ header {
     color: gray;
 }
 
-/* ----- header ----- */
-
-
-
-
-
-/* ----- main ----- */
-
-main {
+.message-container {
     width: 100%;
-    height: 100%;
-    display: flex;
-}
-
-.main-left {
-    width: 40%;
-    height: 100%;
-    background-color: whitesmoke;
-}
-
-
-.left-up {
-    width: 100%;
-    height: 50px;
-    background-color: rgba(31, 142, 226, 0.508);
-}
-
-.left-center {
-    height: 25px;
-    width: 100%;
-}
-
-.left-down {
-    width: 100%;
-    height: 100%;
-}
-
-.left-down div:nth-child(odd) {
-    background-color: rgb(226, 226, 226);
-}
-
-.contacts-container {
-    height: 50px;
-    width: 100%;
-}
-
-.main-right {
-    width: 60%;
-    height: 100%;
-}
-
-.right-up {
-    width: 100%;
-    height: calc(100% - 50px);
+    height: calc(100% - 100px);
     background-image: url("../img/mine.jpg");
     background-size: cover;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    
+    overflow-y: scroll;
+    box-sizing: border-box;
 }
+
+.message-box {
+    width: 100%;
+    
+}
+
+.message {
+    width: 200px;
+    padding: 15px 5px 5px 5px;
+    border-radius: 10px;
+    margin: 10px 0 10px 0;
+    position: relative;
+}
+
+.message-data {
+    font-size: 8px;
+    display: flex;
+    justify-content: end;
+}
+
+.sent {
+    background-color: rgb(183, 255, 186);
+}
+
+
+.to-sent {
+    display: flex;
+    justify-content: end;
+}
+.received  {
+    background-color: #fff;
+    
+}
+
+
+
+
+/* ------ main-right ----- */
+
 
 .right-down {
     width: 100%;
@@ -149,11 +229,14 @@ main {
 
 .right-down input {
     width: 80%;
+    height: 30px;
+    
+    
 }
 
 .right-down i {
     width: 10%;
     text-align: center;
+    
 }
 /* ----- main ----- */
-

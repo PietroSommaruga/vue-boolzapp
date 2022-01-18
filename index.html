@@ -17,39 +17,34 @@
             <div class="up">
                 <div class="container">
 
-                    <header>
-                        <div class="header-left">
-                            <div class="user-name">
-                                <img class="avatar" src="img/avatar_io.jpg" alt="">
-                                <div class="user"> Nome Utente</div>
-                            </div>
-                            <div class="user-name-icon">
-                                <i class="fas fa-circle-notch"></i>
-                                <i class="fas fa-comment-alt"></i>
-                                <i class="fas fa-ellipsis-v"></i>
-                            </div>
-                        </div>
-                        <div class="header-right">
-                                <div class="chat-info-left">
-                                    <img class="avatar" src="img/avatar_8.jpg" alt="">
-                                    <div class="chat-name">
-                                        <div>Michele</div>
-                                        <div class="last-access">Ultimo accesso oggi alle</div>
-                                    </div>
+                    
+                    
+                    
+                        <div class="main-left">
+
+                            <div class="header-left">
+                                <div class="user-name">
+                                    <img class="avatar" src="img/avatar_io.jpg" alt="">
+                                    <div class="user"> Nome Utente</div>
                                 </div>
-                                <div class="chat-info-right">
-                                    <i class="fas fa-search"></i>
-                                    <i class="fas fa-paperclip"></i>
+                                <div class="user-name-icon">
+                                    <i class="fas fa-circle-notch"></i>
+                                    <i class="fas fa-comment-alt"></i>
                                     <i class="fas fa-ellipsis-v"></i>
                                 </div>
-                                
-                        </div>
-                    </header>
-                    
-                    <main>
-                        <div class="main-left">
-                            <div class="left-up"></div>
-                            <div class="left-center"></div>
+                            </div>
+
+
+                            <div class="left-notifiche">
+                                <i class="fas fa-bell-slash"></i>
+                                <div class="notifiche-text">
+                                    <strong>Ricevi notifiche di nuovi messaggi</strong>
+                                    <div class="outline-gray">Attiva notifiche dekstop</div>
+                                </div>
+                            </div>
+                            <div class="left-search">
+                                <input type="text" placeholder="Cerca o inizia una nuova chat.">
+                            </div>
                             <div class="left-down">
 
                                 <div v-for="(contact, i) in contacts" class="contacts-container">
@@ -63,15 +58,104 @@
                         </div>
 
                         <div class="main-right">
-                            <div class="right-up"></div>
+
+                            <div class="header-right">
+                                <div class="chat-info-left">
+                                    <img class="avatar" src="img/avatar_8.jpg" alt="">
+                                    <div class="chat-name">
+                                        <div>Michele</div>
+                                        <div class="last-access">Ultimo accesso oggi alle</div>
+                                    </div>
+                                </div>
+                                <div class="chat-info-right">
+                                    <i class="fas fa-search"></i>
+                                    <i class="fas fa-paperclip"></i>
+                                    <i class="fas fa-ellipsis-v"></i>
+                                </div>
+                                
+                            </div>
+                            
+                                <div class="message-container">
+                                    <div class="message-box">
+                                        <div class="message received">
+                                            Giovanni e Paolo sono arrivati?
+                                            <div class="message-data">10/01/2022</div>
+                                        </div>
+                                    </div>
+
+                                    <div class="message-box to-sent">
+                                        <div class="message sent">
+                                            Giovanni e Paolo sono arrivati?
+                                            <div class="message-data">10/01/2022</div>
+                                        </div>
+                                    </div>
+
+                                    <div class="message-box to-sent">
+                                        <div class="message sent">
+                                            Giovanni e Paolo sono arrivati?
+                                            <div class="message-data">10/01/2022</div>
+                                        </div>
+                                    </div>
+
+                                    <div class="message-box to-sent">
+                                        <div class="message sent">
+                                            Giovanni e Paolo sono arrivati?
+                                            <div class="message-data">10/01/2022</div>
+                                        </div>
+                                    </div>
+
+                                    <div class="message-box">
+                                        <div class="message received">
+                                            Giovanni e Paolo sono arrivati?
+                                            <div class="message-data">10/01/2022</div>
+                                        </div>
+                                    </div>
+
+                                    <div class="message-box">
+                                        <div class="message received">
+                                            Giovanni e Paolo sono arrivati?
+                                            <div class="message-data">10/01/2022</div>
+                                        </div>
+                                    </div>
+
+                                    <div class="message-box to-sent">
+                                        <div class="message sent">
+                                            Giovanni e Paolo sono arrivati?
+                                            <div class="message-data">10/01/2022</div>
+                                        </div>
+                                    </div>
+
+                                    <div class="message-box to-sent">
+                                        <div class="message sent">
+                                            Giovanni e Paolo sono arrivati?
+                                            <div class="message-data">10/01/2022</div>
+                                        </div>
+                                    </div>
+
+                                    <div class="message-box to-sent">
+                                        <div class="message sent">
+                                            Giovanni e Paolo sono arrivati?
+                                            <div class="message-data">10/01/2022</div>
+                                        </div>
+                                    </div>
+
+                                    <div class="message-box to-sent">
+                                        <div class="message sent">
+                                            Giovanni e Paolo sono arrivati?
+                                            <div class="message-data">10/01/2022</div>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                            
                             <div class="right-down">
                                 <i class="far fa-grin"></i>
-                                <input type="text">
+                                <input type="text" placeholder="Scrivi un messaggio...">
                                 <i class="fas fa-microphone"></i>
                             </div>
                         </div>
                         
-                    </main>
+                    
 
 
                 </div>    
