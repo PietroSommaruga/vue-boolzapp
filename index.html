@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Vue slider</title>
+    <title>BOOLZAPP</title>
     <link rel="stylesheet" href="css/style.css">
 
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
@@ -13,15 +13,56 @@
 <body>
     
     <div id="app">
-        
-        <div v-for="(contact, i) in contacts" class="contacts-container">
-            <img  class="avatar" :src="'img/' + 'avatar' + contact.avatar + '.jpg'" alt="">
-            <div class="contact-name">
-                {{(contact.name)}}
+        <div class="all">
+            <div class="up">
+                <div class="container">
+
+                    <header>
+                        <div class="header-left">
+                            <div class="user-name">
+                                <img class="avatar" src="img/avatar_io.jpg" alt="">
+                                <div class="user"> Nome Utente</div>
+                            </div>
+                            <div class="user-name-icon">
+                                <i class="fas fa-circle-notch"></i>
+                                <i class="fas fa-comment-alt"></i>
+                                <i class="fas fa-ellipsis-v"></i>
+                            </div>
+                        </div>
+                        <div class="header-right"></div>
+                    </header>
+                    
+                    <main>
+                        <div class="main-left">
+                            <div class="left-up"></div>
+                            <div class="left-center"></div>
+                            <div class="left-down">
+
+                                <div v-for="(contact, i) in contacts" class="contacts-container">
+                                    <img  class="avatar" :src="'img/' + 'avatar' + contact.avatar + '.jpg'" alt="">
+                                    <div class="contact-name">
+                                        {{(contact.name)}}
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+
+                        <div class="main-right"></div>
+                    </main>
+
+
+                </div>    
             </div>
-        </div>
-            
+        </div>    
     </div>
     <script src="js/script.js"></script>
 </body>
 </html>
+
+
+
+
+
+
+                    
