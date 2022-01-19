@@ -1,6 +1,9 @@
 new Vue({
     el: '#app',
     data: {
+        currentIndex: 0,
+        writedMessage: "",
+        myMessage: [],
         contacts: [
             {
                 name: 'Michele',
@@ -86,7 +89,23 @@ new Vue({
                     }
                 ],
             },
-        ]
+        ],
         
-    }
+        
+    },
+    methods: {
+        indexClick: function (index) {
+          this.currentIndex = index;
+        },
+        addUserMessage: function (index) {
+            
+            this.myMessage.push({
+            text: this.writedMessage,
+            date: "now",
+          });
+          
+          this.writedMessage = "";
+        },
+
+    },
 })
