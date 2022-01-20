@@ -140,6 +140,7 @@ header {
     width: 98%;
     display: flex;
     align-items: center;
+    cursor: pointer;
 }
 
 
