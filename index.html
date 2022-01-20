@@ -46,11 +46,11 @@
                                 </div>
                             </div>
                             <div class="left-search">
-                                <input type="text" placeholder="Cerca o inizia una nuova chat.">
+                                <input v-model="search" type="text" placeholder="Cerca o inizia una nuova chat.">
                             </div>
                             <div class="left-down">
 
-                                <div v-for="(contact, index) in contacts" @click="indexClick(index)" class="contacts-container">
+                                <div v-for="(contact, index) in contacts" @click="indexClick(index)" class="contacts-container" v-if="findAChat(contact)">
                                     <img  @click="indexClick(index)" class="avatar" :src="'img/' + 'avatar' + contact.avatar + '.jpg'" alt="">
                                     <div class="contact-name">
                                         {{(contact.name)}}

@@ -172,10 +172,7 @@ header {
 .message-container {
     height: calc(100% - 100px);
     background-image: url("../img/mine.jpg");
-    background-repeat: repeat;
-    background-attachment: fixed;
-    background-position: center;
-    overflow-x: hidden;
+    background-position: cover;
     overflow-y: scroll;
 }
 
@@ -186,11 +183,11 @@ header {
   }
   
   .message-item {
-    margin: 20px;
+    margin: 5px 10px;
     width: max-content;
     padding: 12px;
     border-radius: 10px;
-    background-color: #ffffff;
+    background-color: #fff;
   }
   
   .single-message.sent > .message-item {
