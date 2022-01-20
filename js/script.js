@@ -97,15 +97,24 @@ new Vue({
         indexClick: function (index) {
           this.currentIndex = index;
         },
-        addUserMessage: function (index) {
-            
-            this.myMessage.push({
+        addUserMessage: function (index) {   //TODO mettere i messaggi in ordine verticale
+            this.contacts[index].messages.push({
             text: this.writedMessage,
             date: "now",
+            status: "sent",
           });
-          
           this.writedMessage = "";
+          setTimeout (() => {
+              this.autoReply(index)
+          }, 1000)
         },
+        autoReply( index) {
+            this.contacts[index].messages.push({
+                date: "now",
+                text: "Ok",
+                status:"received",
+            })
+        }
 
-    },
-})
+    }
+});

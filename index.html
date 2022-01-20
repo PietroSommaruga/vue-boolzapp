@@ -88,24 +88,14 @@
 
                             <!-- ------ MESSAGE-CONTAINER ----- -->
                                 <div class="message-container">
-                                    <div class="message-box to-sent" v-for="message in contacts[currentIndex].messages">
-                                        <div v-if="message.status=='sent'" class="message sent">
-                                            {{message.text}}
-                                            <div class="message-data">{{message.date}}</div>
-                                        </div>
+
+                                    <div class="single-message"v-for="message in contacts[currentIndex].messages":class="message.status">
+                                    <div class="message-item">
+                                      {{message.text}}
+                                      <div class="date">{{message.date}}</div>
                                     </div>
-                                    <div class="message-box" v-for="message in contacts[currentIndex].messages">
-                                        <div v-if="message.status=='received'" class="message received" >
-                                            {{message.text}}
-                                            <div class="message-data">{{message.date}}</div>
-                                        </div>
-                                    </div>
-                                    <div class="message-box to-sent" v-for="message in myMessage">
-                                        <div class="message sent">
-                                            {{message.text}}
-                                            <div class="message-data">{{message.date}}</div>
-                                        </div>
-                                    </div>
+                                  </div>
+
                                 </div>
                             <!-- ------ // MESSAGE-CONTAINER ----- -->
 
@@ -113,7 +103,7 @@
                             <!-- ------ // RIGHT-DOWN ----- -->
                             <div class="right-down">
                                 <i class="far fa-grin"></i>
-                                <input type="text" v-model="writedMessage"@keyup.enter="addUserMessage" placeholder="Scrivi un messaggio...">
+                                <input type="text" v-model="writedMessage"@keyup.enter="addUserMessage(currentIndex)" placeholder="Scrivi un messaggio...">
                                 <i class="fas fa-microphone"></i>
                             </div>
                         </div>
@@ -132,6 +122,28 @@
 </html>
 
 
+
+
+
+
+<!-- <div class="message-box to-sent" v-for="message in contacts[currentIndex].messages">
+    <div v-if="message.status=='sent'" class="message sent">
+        {{message.text}}
+        <div class="message-data">{{message.date}}</div>
+    </div>
+</div>
+<div class="message-box" v-for="message in contacts[currentIndex].messages">
+    <div v-if="message.status=='received'" class="message received" >
+        {{message.text}}
+        <div class="message-data">{{message.date}}</div>
+    </div>
+</div>
+<div class="message-box to-sent" v-for="message in myMessage">
+    <div class="message sent">
+        {{message.text}}
+        <div class="message-data">{{message.date}}</div>
+    </div>
+</div> -->
 
 
 

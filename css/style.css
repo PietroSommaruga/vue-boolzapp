@@ -129,7 +129,6 @@ header {
 
 .left-down {
     width: 100%;
-    height: 100%;
 }
 
 .left-down div:nth-child(odd) {
@@ -171,54 +170,41 @@ header {
 }
 
 .message-container {
-    width: 100%;
     height: calc(100% - 100px);
     background-image: url("../img/mine.jpg");
-    background-size: cover;
-    padding: 20px;
-    display: flex;
-    flex-direction: column;
-    
+    background-repeat: repeat;
+    background-attachment: fixed;
+    background-position: center;
+    overflow-x: hidden;
     overflow-y: scroll;
-    box-sizing: border-box;
 }
 
-.message-box {
-    width: 100%;
-    
-}
-
-.message {
-    width: 200px;
-    padding: 15px 5px 5px 5px;
+.single-message::after {
+    display: table;
+    content: "";
+    clear: both;
+  }
+  
+  .message-item {
+    margin: 20px;
+    width: max-content;
+    padding: 12px;
     border-radius: 10px;
-    margin: 10px 0 10px 0;
-    position: relative;
-}
-
-.message-data {
-    font-size: 8px;
-    display: flex;
-    justify-content: end;
-}
-
-.sent {
-    background-color: rgb(183, 255, 186);
-}
-
-
-.to-sent {
-    display: flex;
-    justify-content: end;
-}
-.received  {
-    background-color: #fff;
-    
-}
-
-
-
-
+    background-color: #ffffff;
+  }
+  
+  .single-message.sent > .message-item {
+    background-color: #d6f9ba;
+    text-align: end;
+    float: right;
+  }
+  
+  .date {
+    padding-top: 3px;
+    text-align: end;
+    font-size: 10px;
+    color: #bbc3bb;
+  }
 /* ------ main-right ----- */
 
 
@@ -234,13 +220,10 @@ header {
 .right-down input {
     width: 80%;
     height: 30px;
-    
-    
 }
 
 .right-down i {
     width: 10%;
     text-align: center;
-    
 }
 /* ----- main ----- */
